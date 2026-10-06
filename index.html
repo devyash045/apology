@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+  <title>From the Bottom of My Heart — I'm Truly Sorry</title>
+  <meta name="description"
+    content="A personal, heartfelt digital apology and promise. Because some people are too precious to lose.">
+  <meta name="theme-color" content="#08070a">
+
+  <!-- Google Fonts: Editorial Serif + Warm Modern Sans + Elegant Script Accent -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Sacramento&display=swap"
+    rel="stylesheet">
+
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <link rel="stylesheet" href="style.css?v=4.2">
+</head>
+
+<body>
+
+  <!-- Ambient Interactive Background Canvas -->
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+
+  <!-- Confetti Canvas for Celebratory Heart Bursts -->
+  <canvas id="confetti-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Light Orbs for Warm Cinematic Vignette -->
+  <div class="glow-orb orb-1" aria-hidden="true"></div>
+  <div class="glow-orb orb-2" aria-hidden="true"></div>
+  <div class="glow-orb orb-3" aria-hidden="true"></div>
+
+  <!-- Top Ambient Sound / Music Toggle Bar -->
+  <header class="top-nav" id="top-nav">
+    <div class="top-nav-inner">
+      <div class="personal-tag" id="nav-recipient">For Someone Precious</div>
+      <div class="nav-controls">
+        <button id="sound-toggle-btn" class="nav-btn" aria-label="Toggle ambient chimes"
+          title="Toggle peaceful ambient sounds">
+          <svg class="sound-icon sound-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" />
+            <line x1="23" y1="9" x2="17" y2="15" />
+            <line x1="17" y1="9" x2="23" y2="15" />
+          </svg>
+          <svg class="sound-icon sound-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="display:none;">
+            <path d="M11 5L6 9H2v6h4l5 4V5z" />
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07" />
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14" />
+          </svg>
+          <span class="btn-tooltip">Ambient Chimes</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Narrative Container -->
+  <main id="app-container">
+
+    <!-- =========================================================================
+         SECTION 1 — THE OPENING
+         ========================================================================= -->
+    <section class="story-section section-opening" id="section-1">
+      <div class="section-inner center-content">
+        <div class="glass-card opening-card" id="opening-card">
+          <div class="card-glow" aria-hidden="true"></div>
+
+          <div class="opening-badge">
+            <span class="pulse-dot"></span>
+            <span>A Message for You</span>
+          </div>
+
+          <!-- Staggered Animated Text Lines -->
+          <div class="opening-text-container" id="opening-text-box">
+            <p class="opening-line line-1" id="type-line-1"></p>
+            <p class="opening-line line-2" id="type-line-2"></p>
+            <p class="opening-line line-3" id="type-line-3"></p>
+          </div>
+
+          <!-- Call to action button -->
+          <div class="opening-cta-wrap" id="opening-cta-wrap">
+            <button class="btn btn-primary" id="btn-give-30s">
+              <span class="btn-text">Give me 30 seconds? 🥺</span>
+              <span class="btn-ripple" aria-hidden="true"></span>
+            </button>
+            <p class="opening-caption">Please don't skip this one.</p>
+          </div>
+
+        </div>
+      </div>
+      <div class="scroll-hint-indicator" aria-hidden="true">
+        <span class="scroll-arrow">↓</span>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2 — NO EXCUSES
+         ========================================================================= -->
+    <section class="story-section section-no-excuses" id="section-2">
+      <div class="section-inner center-content">
+        <div class="glass-card excuses-card" id="excuses-card">
+
+          <div class="section-label">Accountability</div>
+          <h2 class="serif-title mb-large">I’m not here to make excuses.</h2>
+
+          <div class="excuses-list" id="excuses-list">
+            <div class="excuse-item reveal-item" data-delay="100">
+              <span class="excuse-dash">—</span>
+              <span class="excuse-text">I’m not going to say it wasn’t my fault.</span>
+            </div>
+            <div class="excuse-item reveal-item" data-delay="400">
+              <span class="excuse-dash">—</span>
+              <span class="excuse-text">I’m not going to say you overreacted.</span>
+            </div>
+            <div class="excuse-item reveal-item" data-delay="700">
+              <span class="excuse-dash">—</span>
+              <span class="excuse-text">I’m not going to blame the situation.</span>
+            </div>
+            <div class="excuse-item reveal-item emphasis" data-delay="1000">
+              <span class="excuse-dash">—</span>
+              <span class="excuse-text">I know I hurt you.</span>
+            </div>
+          </div>
+
+          <div class="final-apology-line reveal-item" data-delay="1400">
+            <!-- Glowing background heart -->
+            <div class="glowing-heart-backdrop" aria-hidden="true">
+              <svg viewBox="0 0 24 24" class="svg-heart-glow">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </div>
+            <p class="climax-apology-text">And I’m genuinely sorry.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 3 — WHAT I SHOULD HAVE UNDERSTOOD
+         ========================================================================= -->
+    <section class="story-section section-understand" id="section-3">
+      <div class="section-inner">
+        <div class="text-center mb-xl">
+          <div class="section-label">Reflection</div>
+          <h2 class="serif-title">What I Should Have Understood</h2>
+          <p class="section-subtitle">Realizing this late hurts, but learning it matters more than anything.</p>
+        </div>
+
+        <div class="cards-grid">
+          <!-- Card 1 -->
+          <div class="interactive-card tilt-card" id="card-feelings" tabindex="0" role="button" aria-expanded="false">
+            <div class="card-inner-glass">
+              <div class="card-header-icon">
+                <span class="card-icon-emoji">🌸</span>
+                <span class="card-expand-badge">Tap to expand</span>
+              </div>
+              <h3 class="card-title">Your feelings</h3>
+              <p class="card-lead">“Haan, mujhe poora ehsaas hai ki mere actions ki wajah se tumhe kitna zyada hurt
+                hua…”</p>
+              <div class="card-deep-content">
+                <p>Mujhe dil se pata hai ki tumhe bohot bura laga, aur sach kahun toh bura lagna bhi chahiye tha —
+                  kyunki galti poori tarah meri thi. Main itna careless kaise ho sakta hoon ki jiski khushi mere liye
+                  sabse pehle aati hai, usi ki aankhon me dukh de baitha? I am so, so sorry. Please apna gussa chhod do
+                  na, tumhara naraz hona mujhe andar se tod deta hai… ek baar muskura do na please? 🥺❤️</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="interactive-card tilt-card" id="card-trust" tabindex="0" role="button" aria-expanded="false">
+            <div class="card-inner-glass">
+              <div class="card-header-icon">
+                <span class="card-icon-emoji">🕊️</span>
+                <span class="card-expand-badge">Tap to expand</span>
+              </div>
+              <h3 class="card-title">Your trust</h3>
+              <p class="card-lead">“Trust me, main tumhara bharosa kabhi, kisi bhi keemat par todna nahi chahta…”</p>
+              <div class="card-deep-content">
+                <p>Maine hamesha bas yahi koshish ki hai ki tumhe kaise khush rakhun, kya karoon jisse tum hamesha hasti
+                  raho. Par kabhi-kabhi anjaane me aisi galti ho jaati hai jisse aapko itna hurt hota hai. Main jaanta
+                  hoon aap mujhpar kitna bharosa karte ho, aur wahi bharosa mere jeene ki wajah hai. Main wada karta
+                  hoon aage se aisi bewakoofi kabhi nahi hogi💙✨</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="interactive-card tilt-card" id="card-smile" tabindex="0" role="button" aria-expanded="false">
+            <div class="card-inner-glass">
+              <div class="card-header-icon">
+                <span class="card-icon-emoji">✨</span>
+                <span class="card-expand-badge">Tap to expand</span>
+              </div>
+              <h3 class="card-title">Your smile</h3>
+              <p class="card-lead">“Tumhari smile duniya ki sabse pyari smile hai, us muskurahat ke liye toh main kuch
+                bhi kar sakta hoon…”</p>
+              <div class="card-deep-content">
+                <p>Jab bhi meri wajah se wo muskurahat chhin jaati hai aur aapko hurt hota hai, toh sach me mera dil
+                  aadha ho jaata hai. Main aapko kabhi hurt nahi karna chahta, par pata nahi kaise anjaane me galti kar
+                  baithta hoon aur aapki aankhon me aansoon ka kaaran ban jaata hoon. Please mujhe maaf kar do na… tum
+                  hasti ho toh meri poori duniya chamakti hai. Apni pyari si smile wapas le aao na, please? 🥺🌸</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 4 — OUR MEMORIES
+         ========================================================================= -->
+    <section class="story-section section-memories" id="section-4">
+      <div class="section-inner">
+        <div class="text-center mb-xl">
+          <div class="section-label">Perspective</div>
+          <h2 class="serif-title">Because this isn't just about one mistake.</h2>
+          <p class="section-subtitle">It’s about everything that came before it.</p>
+        </div>
+
+        <div class="polaroid-gallery" id="polaroid-gallery">
+          <!-- Polaroid cards dynamically filled or styled -->
+          <div class="polaroid-frame frame-1 tilt-left">
+            <div class="tape-strip" aria-hidden="true"></div>
+            <div class="polaroid-img-container" id="polaroid-img-1">
+              <div class="aesthetic-photo-art art-stars">
+                <div class="art-glow"></div>
+                <div class="art-illustration-wrap">
+                  <svg class="art-vector-scene" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80" cy="55" r="42" fill="url(#star-glow-grad)" opacity="0.35" />
+                    <path d="M74 18a28 28 0 1 0 26 38 22 22 0 1 1-26-38z" fill="#fde047" opacity="0.92"
+                      filter="drop-shadow(0 0 8px rgba(253,224,71,0.6))" />
+                    <circle cx="32" cy="28" r="1.8" fill="#fff" opacity="0.85" />
+                    <circle cx="128" cy="22" r="2.2" fill="#fff" opacity="0.9" />
+                    <circle cx="42" cy="62" r="1.5" fill="#fbcfe8" opacity="0.75" />
+                    <circle cx="132" cy="68" r="1.8" fill="#fbcfe8" opacity="0.8" />
+                    <polygon points="112,38 114,43 119,45 114,47 112,52 110,47 105,45 110,43" fill="#fff"
+                      opacity="0.95" />
+                    <path
+                      d="M80 58 C74 46, 58 46, 58 62 C58 76, 80 88, 80 88 C80 88, 102 76, 102 62 C102 46, 86 46, 80 58 Z"
+                      fill="url(#rose-grad-1)" filter="drop-shadow(0 0 12px rgba(244,114,182,0.7))" />
+                    <path
+                      d="M80 64 C77 56, 66 56, 66 65 C66 73, 80 81, 80 81 C80 81, 94 73, 94 65 C94 56, 83 56, 80 64 Z"
+                      fill="#fff" opacity="0.35" />
+                    <defs>
+                      <radialGradient id="star-glow-grad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#f472b6" stop-opacity="0.8" />
+                        <stop offset="100%" stop-color="#3b0764" stop-opacity="0" />
+                      </radialGradient>
+                      <linearGradient id="rose-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fb7185" />
+                        <stop offset="100%" stop-color="#e11d48" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="art-content">
+                  <span class="art-label">Pehli Mulaqaat 💫</span>
+                  <span class="art-sub-caption">The Day Everything Changed</span>
+                </div>
+              </div>
+            </div>
+            <div class="polaroid-caption">
+              <span class="polaroid-tag">Memory #1</span>
+              <p class="polaroid-text" id="memory-text-1">Jab hum first time mile the… wo meri zindagi ka sabse
+                khoobsurat din tha. Pehli baar tumhe apni aankhon ke saamne dekhna, tumhara haath thaam kar wo pehla
+                ehsaas mehsoos karna… meri favorite memory hai. Us pal ne meri duniya badal di thi. Please humare us
+                pyaar ke liye apna gussa chhod do na meri jaan… ❤️🥺</p>
+            </div>
+          </div>
+
+          <div class="polaroid-frame frame-2 tilt-right">
+            <div class="tape-strip" aria-hidden="true"></div>
+            <div class="polaroid-img-container" id="polaroid-img-2">
+              <div class="aesthetic-photo-art art-sunset">
+                <div class="art-glow"></div>
+                <div class="art-illustration-wrap">
+                  <svg class="art-vector-scene" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80" cy="48" r="38" fill="url(#sunset-sun-grad)" opacity="0.45" />
+                    <rect x="28" y="30" width="48" height="30" rx="12" fill="#fff" fill-opacity="0.22"
+                      stroke="rgba(255,255,255,0.4)" stroke-width="1.5" />
+                    <path d="M40 60 L35 67 L46 60 Z" fill="#fff" fill-opacity="0.22" />
+                    <path
+                      d="M52 42 C50 38, 43 38, 43 44 C43 49, 52 53, 52 53 C52 53, 61 49, 61 44 C61 38, 54 38, 52 42 Z"
+                      fill="#fda4af" />
+                    <rect x="84" y="22" width="48" height="32" rx="12" fill="url(#wine-rose-grad)"
+                      stroke="rgba(255,255,255,0.5)" stroke-width="1.5"
+                      filter="drop-shadow(0 4px 10px rgba(0,0,0,0.3))" />
+                    <path d="M118 54 L124 61 L114 54 Z" fill="url(#wine-rose-grad)" />
+                    <path
+                      d="M108 34 C106 30, 99 30, 99 36 C99 41, 108 45, 108 45 C108 45, 117 41, 117 36 C117 30, 110 30, 108 34 Z"
+                      fill="#fff" />
+                    <circle cx="78" cy="20" r="2" fill="#fef08a" opacity="0.95" />
+                    <circle cx="86" cy="12" r="1.5" fill="#fff" opacity="0.95" />
+                    <defs>
+                      <radialGradient id="sunset-sun-grad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.9" />
+                        <stop offset="100%" stop-color="#be123c" stop-opacity="0" />
+                      </radialGradient>
+                      <linearGradient id="wine-rose-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fb7185" />
+                        <stop offset="100%" stop-color="#be185d" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="art-content">
+                  <span class="art-label">Tumhari Pyaari Baatein 🌙</span>
+                  <span class="art-sub-caption">Ghanton Ka Meetha Sukoon</span>
+                </div>
+              </div>
+            </div>
+            <div class="polaroid-caption">
+              <span class="polaroid-tag">Memory #2</span>
+              <p class="polaroid-text" id="memory-text-2">Jab tum bina ruke apni saari baatein mujhe batati ho, wo
+                baatein sunna mujhe duniya me sabse zyada sukoon deta hai. Tumhara har baat mujhse share karna aur jab
+                tum meri baat pyaar se maan leti ho na… toh dil khushi se jhoom uthta hai ✨💖</p>
+            </div>
+          </div>
+
+          <div class="polaroid-frame frame-3 tilt-left">
+            <div class="tape-strip" aria-hidden="true"></div>
+            <div class="polaroid-img-container" id="polaroid-img-3">
+              <div class="aesthetic-photo-art art-laughter">
+                <div class="art-glow"></div>
+                <div class="art-illustration-wrap">
+                  <svg class="art-vector-scene" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80" cy="50" r="38" fill="url(#laugh-glow)" opacity="0.38" />
+                    <circle cx="80" cy="50" r="25" fill="url(#laugh-face-grad)"
+                      filter="drop-shadow(0 0 14px rgba(234,179,8,0.5))" />
+                    <path d="M69 45 Q74 39 79 45" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"
+                      fill="none" />
+                    <path d="M81 45 Q86 39 91 45" stroke="#78350f" stroke-width="2.5" stroke-linecap="round"
+                      fill="none" />
+                    <path d="M70 53 Q80 67 90 53 Z" fill="#78350f" />
+                    <path d="M74 53 Q80 62 86 53 Z" fill="#f43f5e" />
+                    <circle cx="66" cy="52" r="4" fill="#f43f5e" opacity="0.6" />
+                    <circle cx="94" cy="52" r="4" fill="#f43f5e" opacity="0.6" />
+                    <path
+                      d="M40 34 C38 30, 33 30, 33 34 C33 38, 40 42, 40 42 C40 42, 47 38, 47 34 C47 30, 42 30, 40 34 Z"
+                      fill="#f472b6" />
+                    <path
+                      d="M120 38 C118 34, 113 34, 113 38 C113 42, 120 46, 120 46 C120 46, 127 42, 127 38 C127 34, 122 34, 120 38 Z"
+                      fill="#fb7185" />
+                    <circle cx="108" cy="22" r="2.5" fill="#fde047" />
+                    <circle cx="50" cy="65" r="2" fill="#fff" />
+                    <defs>
+                      <radialGradient id="laugh-glow" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#f472b6" stop-opacity="0.8" />
+                        <stop offset="100%" stop-color="#4a044e" stop-opacity="0" />
+                      </radialGradient>
+                      <linearGradient id="laugh-face-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fde047" />
+                        <stop offset="100%" stop-color="#f59e0b" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="art-content">
+                  <span class="art-label">Humari Be-Parwah Hasi 😂</span>
+                  <span class="art-sub-caption">Jab Hum Ghanton Haste The</span>
+                </div>
+              </div>
+            </div>
+            <div class="polaroid-caption">
+              <span class="polaroid-tag">Memory #3</span>
+              <p class="polaroid-text" id="memory-text-3">Humari wo hasi aur be-parwah lamhe… jab hum bina kisi baat ke
+                ghanton haste rehte the. Tumhari wo pyaari si muskaan aur shararatein meri zindagi ki sabse badi daulat
+                hain 😂❤️</p>
+            </div>
+          </div>
+
+          <div class="polaroid-frame frame-4 tilt-right">
+            <div class="tape-strip" aria-hidden="true"></div>
+            <div class="polaroid-img-container" id="polaroid-img-4">
+              <div class="aesthetic-photo-art art-heart">
+                <div class="art-glow"></div>
+                <div class="art-illustration-wrap">
+                  <svg class="art-vector-scene" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="80" cy="48" r="42" fill="url(#hug-glow-grad)" opacity="0.5" />
+                    <path
+                      d="M80 28 C70 10, 38 10, 38 36 C38 58, 80 82, 80 82 C80 82, 122 58, 122 36 C122 10, 90 10, 80 28 Z"
+                      fill="url(#hug-heart-grad)" opacity="0.9" filter="drop-shadow(0 0 18px rgba(244,63,94,0.6))" />
+                    <circle cx="73" cy="38" r="8" fill="#fff" opacity="0.95" />
+                    <circle cx="87" cy="39" r="7.5" fill="#ffe4e6" opacity="0.95" />
+                    <path
+                      d="M62 55 C62 45, 70 44, 80 44 C90 44, 98 45, 98 55 C98 65, 88 71, 80 71 C72 71, 62 65, 62 55 Z"
+                      fill="#fff" opacity="0.88" />
+                    <path
+                      d="M80 51 C78 47, 74 47, 74 50 C74 54, 80 58, 80 58 C80 58, 86 54, 86 50 C86 47, 82 47, 80 51 Z"
+                      fill="#e11d48" />
+                    <circle cx="48" cy="22" r="2" fill="#fff" opacity="0.85" />
+                    <circle cx="112" cy="22" r="2.2" fill="#fef08a" opacity="0.9" />
+                    <circle cx="80" cy="14" r="1.8" fill="#fff" opacity="0.9" />
+                    <defs>
+                      <radialGradient id="hug-glow-grad" cx="50%" cy="50%" r="50%">
+                        <stop offset="0%" stop-color="#fb7185" stop-opacity="0.95" />
+                        <stop offset="100%" stop-color="#4c0519" stop-opacity="0" />
+                      </radialGradient>
+                      <linearGradient id="hug-heart-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#f43f5e" />
+                        <stop offset="100%" stop-color="#9f1239" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <div class="art-content">
+                  <span class="art-label">Humara Pehla Hug 🫂</span>
+                  <span class="art-sub-caption">Duniya Ka Sabse Bada Sukoon</span>
+                </div>
+              </div>
+            </div>
+            <div class="polaroid-caption">
+              <span class="polaroid-tag">Memory #4</span>
+              <p class="polaroid-text" id="memory-text-4">Humara wo pehla hug… jise main kabhi nahi bhool sakta. Wo
+                sukoon, wo pal mere liye kisi vardaan se kam nahi tha. Tumhari baahon me jo sukoon hai wo poori duniya
+                me kahin nahi hai… I love you so much, please mujhe maaf kar do na 🫂❤️</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="memories-note text-center">
+          <p class="small-muted-note">“These moments built who we are — and they’re worth protecting.”</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 5 — A LITTLE TEST 😭
+         ========================================================================= -->
+    <section class="story-section section-test" id="section-5">
+      <div class="section-inner center-content">
+        <div class="glass-card test-card" id="test-card">
+          <div class="section-label">A Moment of Honesty</div>
+          <h2 class="serif-title test-title">Be honest…</h2>
+          <p class="test-question">Are you still angry?</p>
+
+          <div class="test-buttons-wrap" id="test-buttons-group">
+            <button class="test-btn test-btn-yes" id="btn-test-yes" data-answer="yes">
+              <span class="btn-emoji">😤</span>
+              <span>YES</span>
+            </button>
+            <button class="test-btn test-btn-maybe" id="btn-test-maybe" data-answer="maybe">
+              <span class="btn-emoji">😒</span>
+              <span>Maybe…</span>
+            </button>
+            <button class="test-btn test-btn-no" id="btn-test-no" data-answer="no">
+              <span class="btn-emoji">❤️</span>
+              <span>Not anymore</span>
+            </button>
+          </div>
+
+          <!-- Dynamic Response Box -->
+          <div class="test-feedback-box" id="test-feedback" aria-live="polite">
+            <div class="feedback-primary-msg" id="feedback-primary"></div>
+            <div class="feedback-secondary-msg" id="feedback-secondary"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 6 — THE PROMISE
+         ========================================================================= -->
+    <section class="story-section section-promise" id="section-6">
+      <div class="section-inner center-content">
+        <div class="cinematic-promise-wrap text-center">
+          <div class="section-label">A Real Commitment</div>
+
+          <p class="promise-prelude" id="promise-line-1">I can’t promise I’ll never make a mistake.</p>
+          <div class="promise-pause-dots"><span>•</span><span>•</span><span>•</span></div>
+          <p class="promise-intro" id="promise-line-2">But I can promise…</p>
+
+          <div class="promise-commitments" id="promise-commitments">
+            <div class="commitment-item reveal-item" data-delay="200">
+              <div class="commitment-bullet">✦</div>
+              <p class="commitment-text">I’ll try harder to understand you.</p>
+            </div>
+            <div class="commitment-item reveal-item" data-delay="500">
+              <div class="commitment-bullet">✦</div>
+              <p class="commitment-text">I’ll listen instead of assuming.</p>
+            </div>
+            <div class="commitment-item reveal-item" data-delay="800">
+              <div class="commitment-bullet">✦</div>
+              <p class="commitment-text">I’ll think before I act.</p>
+            </div>
+            <div class="commitment-item reveal-item" data-delay="1100">
+              <div class="commitment-bullet">✦</div>
+              <p class="commitment-text">And I’ll never take your forgiveness for granted.</p>
+            </div>
+          </div>
+
+          <div class="promise-climax-wrap reveal-item" data-delay="1500">
+            <h3 class="promise-final-text">I mean it. ❤️</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 7 — THE EMOTIONAL CLIMAX
+         ========================================================================= -->
+    <section class="story-section section-climax" id="section-7">
+      <div class="section-inner center-content">
+        <div class="climax-container text-center">
+
+          <div class="climax-staggered-lines" id="climax-lines">
+            <p class="climax-subline reveal-item" data-delay="200">I don’t want to win this argument.</p>
+            <p class="climax-subline reveal-item" data-delay="600">I don’t want to prove that I was right.</p>
+            <p class="climax-subline reveal-item" data-delay="1000">I don’t want my ego to matter more than you.</p>
+          </div>
+
+          <div class="climax-pause-divider" aria-hidden="true">
+            <span class="gentle-line"></span>
+          </div>
+
+          <div class="climax-dominant-wrap reveal-item" data-delay="1400">
+            <h2 class="climax-dominant-sentence">
+              I just don’t want to lose someone who means this much to me.
+            </h2>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION — A SPECIAL LETTER (TO MY WIFFEE JI)
+         ========================================================================= -->
+    <section class="story-section section-love-letter" id="section-letter">
+      <div class="section-inner center-content">
+        <div class="love-letter-wrapper">
+          
+          <!-- Teaser Stage: There is something special for you -->
+          <div class="glass-card letter-teaser-card" id="letter-teaser-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            
+            <div class="teaser-envelope-icon-wrap" aria-hidden="true">
+              <span class="teaser-envelope-emoji">💌</span>
+            </div>
+
+            <div class="section-label">A Special Surprise For You</div>
+            <h2 class="serif-title teaser-title">There is something special for you…</h2>
+            <p class="teaser-subtext">Maine apne dil ki har ek baat, har ek ehsaas is khat me utaar diya hai. Sirf aur sirf aapke liye.</p>
+
+            <div class="teaser-cta-wrap">
+              <button class="btn btn-grand" id="btn-open-letter" type="button">
+                <span class="btn-text">Open My Letter 💌</span>
+                <span class="btn-heart-aura" aria-hidden="true"></span>
+              </button>
+              <p class="teaser-hint">Tap to open with love</p>
+            </div>
+          </div>
+
+          <!-- Unfolded Love Letter (Revealed after clicking Open) -->
+          <div class="love-letter-card" id="love-letter-card" style="display: none;">
+            
+            <!-- Inner Sheen Container (clipping sheen without clipping top wax seal) -->
+            <div class="letter-sheen-container" aria-hidden="true">
+              <div class="letter-sheen"></div>
+            </div>
+
+            <!-- Wax Seal Emblem -->
+            <button class="wax-seal-badge" id="love-letter-wax-seal" type="button" aria-label="A touch of love" title="Tap with love ❤️">
+              <svg viewBox="0 0 24 24" class="wax-seal-icon">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </button>
+
+            <div class="letter-header reveal-item" data-delay="150">
+              <div class="letter-tagline">💌 Dil Se Ek Khat</div>
+              <h2 class="letter-title">To My Wiffee Ji ❤️</h2>
+              <p class="letter-date-stamp">Likha hai dil ki har ek dhadkan se, sirf aapke liye ✦</p>
+            </div>
+
+            <div class="letter-body">
+              <p class="letter-para reveal-item" data-delay="350">
+                Main aapse bohot beinteha pyaar karta hoon — itna ki shabdon me bayaan karna bhi kam pad jaye. Mujhe
+                achhe se maalum hai ki mujhse galti hui hai, aur meri laparwahi ki wajah se aapka dil dukhha hai. Jab
+                bhi main sochta hoon ki meri kisi baat ya harkat ne aapki aankhon me dukh laaya, toh mera dil andar tak
+                ro padta hai.
+              </p>
+
+              <p class="letter-para emphasis-para reveal-item" data-delay="650">
+                Main apne dil par haath rakh kar aapse sachha vada karta hoon ki ye galti dobara kabhi nahi hogi. Main
+                ise apni zindagi me dobara kabhi nahi dohraunga. Please mujhe maaf kar do na meri jaan… meri is ek galti
+                ki mujhe itni badi saza mat do ki aap mujhse door ho jao ya mujhse baat karna band kar do.
+              </p>
+
+              <p class="letter-para reveal-item" data-delay="950">
+                Sach kahun toh main aapke bina ek pal bhi theek se jee nahi paunga. Mujhe aapse hadd se zyada pyaar hai
+                aur mujhe aapki khud se bhi hazaron guna zyada parvaah hai. Aapki ek muskaan mere poore din ko roshan
+                kar deti hai, aur aapka naraz hona mere poore wajood ko hila deta hai.
+              </p>
+
+              <p class="letter-para reveal-item" data-delay="1250">
+                Mera gussa, meri zidd, meri har ek cheez aapke saamne haar jaati hai, kyunki mere liye aapki khushi se
+                badhkar is poori kayanaat me kuch nahi hai. Main apna sab kuch haar kar bhi bas aapko khush aur mehfooz
+                dekhna chahta hoon.
+              </p>
+
+              <p class="letter-para reveal-item" data-delay="1550">
+                Please apna pyara sa haath mere haath me de do, aur apne is nadan se ache se pyaare bache ko ek baar
+                apne gale se laga
+                kar maaf kar do na… I love you more than words can ever say, meri Wiffee Ji. ❤️🥺
+              </p>
+            </div>
+
+            <div class="letter-footer reveal-item" data-delay="1850">
+              <div class="letter-signature-text">Hamesha sirf aur sirf aapka Yash</div>
+              <div class="letter-signature-sub">Yours, now and forever 🕊️✨</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 8 — THE FINAL APOLOGY
+         ========================================================================= -->
+    <section class="story-section section-final-apology" id="section-8">
+      <div class="section-inner center-content">
+        <div class="glass-card apology-letter-card" id="apology-card">
+
+          <div class="apology-stage-1" id="apology-pre-click">
+            <span class="apology-intro-word">So…</span>
+            <h1 class="apology-grand-heading">I’m Sorry.</h1>
+            <p class="apology-sub-emphasis">Really, truly, genuinely sorry. ❤️</p>
+
+            <div class="apology-cta-wrap">
+              <button class="btn btn-grand" id="btn-last-chance">
+                <span class="btn-text">Can I have one last chance? 🥺</span>
+                <span class="btn-heart-aura" aria-hidden="true"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Revealed After Button Click with Confetti & Warm Light -->
+          <div class="apology-stage-2" id="apology-post-click" style="display: none;">
+            <div class="soft-bloom-indicator">
+              <svg viewBox="0 0 24 24" class="inline-heart-svg">
+                <path
+                  d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+              </svg>
+            </div>
+
+            <div class="final-letter-paragraphs" id="final-letter-content">
+              <p class="final-letter-p" id="fl-p1">I don’t expect you to forget everything instantly.</p>
+              <p class="final-letter-p" id="fl-p2">I just hope you know that I’m sorry.</p>
+              <p class="final-letter-p" id="fl-p3">And if you’re willing…</p>
+              <p class="final-letter-p emphasis" id="fl-p4">I’d rather fix things than lose you.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 9 — REASONS
+         ========================================================================= -->
+    <section class="story-section section-reasons" id="section-9">
+      <div class="section-inner center-content">
+        <div class="reasons-wrapper text-center">
+
+          <div class="section-label">Reminders of Love</div>
+          <h2 class="serif-title">While you’re here…</h2>
+          <p class="section-subtitle">Let me remind you why you’re special to me.</p>
+
+          <!-- Interactive Reason Generator Card -->
+          <div class="reason-display-card" id="reason-display-card">
+            <div class="reason-card-sheen" aria-hidden="true"></div>
+            <div class="reason-counter-pill" id="reason-counter">Reason #1</div>
+            <div class="reason-quote-mark">“</div>
+            <blockquote class="reason-quote-text" id="reason-text">
+              Because you make ordinary moments feel special.
+            </blockquote>
+            <div class="reason-sparkle-footer">✨</div>
+          </div>
+
+          <div class="reason-actions">
+            <button class="btn btn-secondary" id="btn-next-reason">
+              <span class="btn-text">Give me a reason ❤️</span>
+            </button>
+            <p class="reasons-click-hint">Click as many times as you want — there's so much I love about you.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 10 — FINAL SCREEN
+         ========================================================================= -->
+    <section class="story-section section-final-screen" id="section-10">
+      <div class="section-inner center-content">
+        <div class="final-screen-container text-center">
+
+          <div class="final-gentle-lines">
+            <p class="final-slow-line" id="fs-line-1">Whatever you decide…</p>
+            <div class="final-pause-breath"></div>
+            <p class="final-slow-line" id="fs-line-2">I just wanted you to know…</p>
+            <div class="final-pause-breath"></div>
+            <h2 class="final-supreme-line" id="fs-line-3">You matter to me. ❤️</h2>
+          </div>
+
+          <div class="final-signature-wrap">
+            <p class="final-sender-sign" id="final-sender-name">
+              — From someone who really hopes you’re smiling again.
+            </p>
+          </div>
+
+          <div class="subtle-animated-heart-wrap">
+            <svg class="final-beating-heart" viewBox="0 0 24 24">
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+            </svg>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js?v=4.2"></script>
+</body>
+
+</html>
